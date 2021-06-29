@@ -45,12 +45,12 @@
 
 # Authenticator Project Homework
 
-# users = [
-#     {username: "tarun", password: "password1"},
-#     {username: "rick", password: "password2"},
-#     {username: "morty", password: "password3"},
-#     {username: "jessica", password: "password4"},
-# ]
+users = [
+    {username: "tarun", password: "password1"},
+    {username: "rick", password: "password2"},
+    {username: "morty", password: "password3"},
+    {username: "jessica", password: "password4"},
+]
 
 # # We will learn Hash, Array, Branching, While loop and designing programme execution flow
 
@@ -88,39 +88,66 @@
 
 # Homework 2
 
-dial_book = {
-  "newyork" => "212",
-  "newbrunswick" => "732",
-  "edison" => "908",
-  "plainsboro" => "609",
-  "sanfrancisco" => "301",
-  "miami" => "305",
-  "paloalto" => "650",
-  "evanston" => "847",
-  "orlando" => "407",
-  "lancaster" => "717",
-}
+# dial_book = {
+#   "newyork" => "212",
+#   "newbrunswick" => "732",
+#   "edison" => "908",
+#   "plainsboro" => "609",
+#   "sanfrancisco" => "301",
+#   "miami" => "305",
+#   "paloalto" => "650",
+#   "evanston" => "847",
+#   "orlando" => "407",
+#   "lancaster" => "717",
+# }
 
-def get_city_name(somehash)
-  somehash.keys
+# def get_city_name(somehash)
+#   somehash.keys
+# end
+
+# def get_area_code(somehash, key)
+#   somehash[key]
+# end
+
+# loop do
+#   puts "Do you want to lookup an area code based on a city name (Y/N)"
+#   answer = gets.chomp.downcase
+#   break if answer != "y"
+#   puts "Which city do you want to lookup the area code for ?"
+#   puts get_city_name(dial_book)
+#   puts "Enter your selection"
+#   prompt = gets.chomp
+#   if dial_book.include?(prompt)
+#     puts "The area code for #{prompt} is #{get_area_code(dial_book, prompt)}"
+#   else
+#     puts "You entered the incorrect city"
+#   end
+#   # dial_book
+# end
+
+require 'bcrypt'
+
+# my_password = BCrypt::Password.create("my password")
+
+# puts my_password
+# puts my_password.version
+# puts my_password.cost
+# puts my_password == "my password"
+# puts my_password == "not my password"
+
+def create_hash_digest(password)
+    BCrypt::Password.create(password)
 end
 
-def get_area_code(somehash, key)
-  somehash[key]
+def verify_hash_digest(password)
+    BCrypt::Password.new(password)
 end
 
-loop do
-  puts "Do you want to lookup an area code based on a city name (Y/N)"
-  answer = gets.chomp.downcase
-  break if answer != "y"
-  puts "Which city do you want to lookup the area code for ?"
-  puts get_city_name(dial_book)
-  puts "Enter your selection"
-  prompt = gets.chomp
-  if dial_book.include?(prompt)
-    puts "The area code for #{prompt} is #{get_area_code(dial_book, prompt)}"
-  else
-    puts "You entered the incorrect city"
-  end
-  # dial_book
+def create_secure_user(list_of_users)
+    list_of_users.each do |user_record|
+        user_record[:password] = create_hash_digest(user_record[:password])
+    end
+    list_of_users
 end
+
+puts create_secure_user(users)
