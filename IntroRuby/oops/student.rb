@@ -1,5 +1,8 @@
-class Student
+require_relative 'crud'
 
+class Student
+    # Mixin
+    include Crud
     # attr_accessor allows you to access instance variable without creating getters and setters
     # each instance variable
     attr_accessor :first_name, :last_name, :email, :password
@@ -63,8 +66,11 @@ end
 tarun = Student.new("Tarun", "Kantiwal", "tarun-90", "coe17b031@iiitdm.ac.in", "password1")
 tarun1 = Student.new("Tarun1", "Kantiwal1", "tarun-91", "coe17b031@iiitdm.ac.in", "password2")
 
-puts tarun
-puts tarun1
+# puts tarun
+# puts tarun1
 
-tarun.last_name = tarun1.last_name
-puts tarun
+# tarun.last_name = tarun1.last_name
+# puts tarun
+
+hashed_password = tarun.create_hash_digest(tarun.password)
+puts hashed_password
