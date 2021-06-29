@@ -150,4 +150,16 @@ def create_secure_user(list_of_users)
     list_of_users
 end
 
-puts create_secure_user(users)
+def autheticate_user(username, password, list_of_users)
+  list_of_users.each do |user_record|
+    if user_record[:username] == username && verify_hash_digest(user_record[:password]) == password
+      return user_record
+    end
+  end
+  "Credentials were not correct."
+end
+
+new_users = puts create_secure_user(users)
+puts new_users
+
+authenticator_user("jessica", "password4", new_users)
