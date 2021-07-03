@@ -15,4 +15,10 @@
  *= require_self
  */
 
-  /* $navbar-default-bg: #08088A; */
+ /* .navbar {
+
+  background-color: pink !important;
+  
+  } */
+
+/* // @import 'bootstrap/dist/css/bootstrap'; */
