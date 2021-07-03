@@ -1524,3 +1524,1237 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 4833)
 
 
+Started GET "/articles/5/edit" for ::1 at 2021-07-03 11:43:01 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/articles_controller.rb:7:in `edit'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5135)
+Completed 200 OK in 25ms (Views: 13.0ms | ActiveRecord: 1.0ms | Allocations: 11231)
+
+
+Started GET "/articles/5/edit" for ::1 at 2021-07-03 11:50:43 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/articles_controller.rb:7:in `edit'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4550)
+Completed 200 OK in 24ms (Views: 14.2ms | ActiveRecord: 0.6ms | Allocations: 9597)
+
+
+Started PATCH "/articles/5" for ::1 at 2021-07-03 11:50:57 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"aa", "description"=>"This is article 5"}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `update'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1184)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/articles_controller.rb:25:in `update'
+Started PATCH "/articles/5" for ::1 at 2021-07-03 11:51:29 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"aa", "description"=>"This is article 5"}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/articles_controller.rb:24:in `update'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1884)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 5588)
+Completed 200 OK in 24ms (Views: 10.6ms | ActiveRecord: 1.0ms | Allocations: 12027)
+
+
+Started PATCH "/articles/5" for ::1 at 2021-07-03 11:51:30 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"aa", "description"=>"This is article 5"}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 5523)
+Completed 200 OK in 39ms (Views: 33.5ms | ActiveRecord: 0.4ms | Allocations: 7454)
+
+
+Started PATCH "/articles/5" for ::1 at 2021-07-03 11:51:33 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"aaaa", "description"=>"This is article 5"}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:25:in `update'
+  [1m[36mArticle Update (0.7ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "aaaa"], ["updated_at", "2021-07-03 06:21:33.733802"], ["id", 5]]
+  ↳ app/controllers/articles_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:25:in `update'
+Redirected to http://localhost:3000/articles/5
+Completed 302 Found in 12ms (ActiveRecord: 2.4ms | Allocations: 3124)
+
+
+Started GET "/articles/5" for ::1 at 2021-07-03 11:51:33 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:34:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3957)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 5091)
+
+
+Started GET "/articles/5/edit" for ::1 at 2021-07-03 11:51:39 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 749)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4529)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 5526)
+
+
+Started PATCH "/articles/5" for ::1 at 2021-07-03 11:51:43 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"a", "description"=>"This is article 5"}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5523)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 7451)
+
+
+Started PATCH "/articles/5" for ::1 at 2021-07-03 11:51:48 +0530
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"Aaaaaaooooo", "description"=>"This is article 5"}, "commit"=>"Update Article", "id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:25:in `update'
+  [1m[36mArticle Update (0.6ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "Aaaaaaooooo"], ["updated_at", "2021-07-03 06:21:48.106072"], ["id", 5]]
+  ↳ app/controllers/articles_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:25:in `update'
+Redirected to http://localhost:3000/articles/5
+Completed 302 Found in 12ms (ActiveRecord: 2.2ms | Allocations: 3086)
+
+
+Started GET "/articles/5" for ::1 at 2021-07-03 11:51:48 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:34:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3828)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 4832)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:02:01 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4125)
+Completed 200 OK in 21ms (Views: 17.5ms | Allocations: 5766)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:26:03 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/articles/index.html.erb:9
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:9
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4375)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 8411)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.8ms | Allocations: 9611)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:30:22 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 944)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4979)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.2ms | Allocations: 6202)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:30:36 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4974)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 6173)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:32:24 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1296)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2470)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>List of all the articles</h1>
+
+<p>
+<%= link_to "Create new article", new_article_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+    <td><%= link_to 'Edit' edit_article_path(article) %></td>
+    <td><%= link_to 'Show' article_path(article) %></td>
+  </tr>
+  <% end %>
+</table>
+):
+1:    <h1>List of all the articles</h1>
+2:    
+3:    <p>
+4:    <%= link_to "Create new article", new_article_path %>
+5:    </p>
+6:    
+7:    <table>
+8:      <tr>
+9:        <th>Title</th>
+10:        <th>Description</th>
+11:      </tr>
+12:    
+13:      <% @articles.each do |article| %>
+14:      <tr>
+15:        <td><%= article.title %></td>
+16:        <td><%= article.description %></td>
+17:        <td><%= link_to 'Edit' edit_article_path(article) %></td>
+18:        <td><%= link_to 'Show' article_path(article) %></td>
+19:      </tr>
+20:      <% end %>
+21:    </table>
+  
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/articles" for ::1 at 2021-07-03 12:32:24 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1573)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2213)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>List of all the articles</h1>
+
+<p>
+<%= link_to "Create new article", new_article_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+    <td><%= link_to 'Edit' edit_article_path(article) %></td>
+    <td><%= link_to 'Show' article_path(article) %></td>
+  </tr>
+  <% end %>
+</table>
+):
+1:    <h1>List of all the articles</h1>
+2:    
+3:    <p>
+4:    <%= link_to "Create new article", new_article_path %>
+5:    </p>
+6:    
+7:    <table>
+8:      <tr>
+9:        <th>Title</th>
+10:        <th>Description</th>
+11:      </tr>
+12:    
+13:      <% @articles.each do |article| %>
+14:      <tr>
+15:        <td><%= article.title %></td>
+16:        <td><%= article.description %></td>
+17:        <td><%= link_to 'Edit' edit_article_path(article) %></td>
+18:        <td><%= link_to 'Show' article_path(article) %></td>
+19:      </tr>
+20:      <% end %>
+21:    </table>
+  
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/articles" for ::1 at 2021-07-03 12:32:25 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1576)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2113)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>List of all the articles</h1>
+
+<p>
+<%= link_to "Create new article", new_article_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+    <td><%= link_to 'Edit' edit_article_path(article) %></td>
+    <td><%= link_to 'Show' article_path(article) %></td>
+  </tr>
+  <% end %>
+</table>
+):
+1:    <h1>List of all the articles</h1>
+2:    
+3:    <p>
+4:    <%= link_to "Create new article", new_article_path %>
+5:    </p>
+6:    
+7:    <table>
+8:      <tr>
+9:        <th>Title</th>
+10:        <th>Description</th>
+11:      </tr>
+12:    
+13:      <% @articles.each do |article| %>
+14:      <tr>
+15:        <td><%= article.title %></td>
+16:        <td><%= article.description %></td>
+17:        <td><%= link_to 'Edit' edit_article_path(article) %></td>
+18:        <td><%= link_to 'Show' article_path(article) %></td>
+19:      </tr>
+20:      <% end %>
+21:    </table>
+  
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/articles" for ::1 at 2021-07-03 12:32:25 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1595)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1973)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3666)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>List of all the articles</h1>
+
+<p>
+<%= link_to "Create new article", new_article_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+    <td><%= link_to 'Edit' edit_article_path(article) %></td>
+    <td><%= link_to 'Show' article_path(article) %></td>
+  </tr>
+  <% end %>
+</table>
+):
+1:    <h1>List of all the articles</h1>
+2:    
+3:    <p>
+4:    <%= link_to "Create new article", new_article_path %>
+5:    </p>
+6:    
+7:    <table>
+8:      <tr>
+9:        <th>Title</th>
+10:        <th>Description</th>
+11:      </tr>
+12:    
+13:      <% @articles.each do |article| %>
+14:      <tr>
+15:        <td><%= article.title %></td>
+16:        <td><%= article.description %></td>
+17:        <td><%= link_to 'Edit' edit_article_path(article) %></td>
+18:        <td><%= link_to 'Show' article_path(article) %></td>
+19:      </tr>
+20:      <% end %>
+21:    </table>
+  
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/articles" for ::1 at 2021-07-03 12:32:25 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1452)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2167)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2814)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>List of all the articles</h1>
+
+<p>
+<%= link_to "Create new article", new_article_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+    <td><%= link_to 'Edit' edit_article_path(article) %></td>
+    <td><%= link_to 'Show' article_path(article) %></td>
+  </tr>
+  <% end %>
+</table>
+):
+1:    <h1>List of all the articles</h1>
+2:    
+3:    <p>
+4:    <%= link_to "Create new article", new_article_path %>
+5:    </p>
+6:    
+7:    <table>
+8:      <tr>
+9:        <th>Title</th>
+10:        <th>Description</th>
+11:      </tr>
+12:    
+13:      <% @articles.each do |article| %>
+14:      <tr>
+15:        <td><%= article.title %></td>
+16:        <td><%= article.description %></td>
+17:        <td><%= link_to 'Edit' edit_article_path(article) %></td>
+18:        <td><%= link_to 'Show' article_path(article) %></td>
+19:      </tr>
+20:      <% end %>
+21:    </table>
+  
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/articles" for ::1 at 2021-07-03 12:32:26 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 4183)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 5316)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 6258)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>List of all the articles</h1>
+
+<p>
+<%= link_to "Create new article", new_article_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+    <td><%= link_to 'Edit' edit_article_path(article) %></td>
+    <td><%= link_to 'Show' article_path(article) %></td>
+  </tr>
+  <% end %>
+</table>
+):
+1:    <h1>List of all the articles</h1>
+2:    
+3:    <p>
+4:    <%= link_to "Create new article", new_article_path %>
+5:    </p>
+6:    
+7:    <table>
+8:      <tr>
+9:        <th>Title</th>
+10:        <th>Description</th>
+11:      </tr>
+12:    
+13:      <% @articles.each do |article| %>
+14:      <tr>
+15:        <td><%= article.title %></td>
+16:        <td><%= article.description %></td>
+17:        <td><%= link_to 'Edit' edit_article_path(article) %></td>
+18:        <td><%= link_to 'Show' article_path(article) %></td>
+19:      </tr>
+20:      <% end %>
+21:    </table>
+  
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/articles" for ::1 at 2021-07-03 12:32:27 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1704)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3711)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 7740)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>List of all the articles</h1>
+
+<p>
+<%= link_to "Create new article", new_article_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+    <td><%= link_to 'Edit' edit_article_path(article) %></td>
+    <td><%= link_to 'Show' article_path(article) %></td>
+  </tr>
+  <% end %>
+</table>
+):
+1:    <h1>List of all the articles</h1>
+2:    
+3:    <p>
+4:    <%= link_to "Create new article", new_article_path %>
+5:    </p>
+6:    
+7:    <table>
+8:      <tr>
+9:        <th>Title</th>
+10:        <th>Description</th>
+11:      </tr>
+12:    
+13:      <% @articles.each do |article| %>
+14:      <tr>
+15:        <td><%= article.title %></td>
+16:        <td><%= article.description %></td>
+17:        <td><%= link_to 'Edit' edit_article_path(article) %></td>
+18:        <td><%= link_to 'Show' article_path(article) %></td>
+19:      </tr>
+20:      <% end %>
+21:    </table>
+  
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/articles/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/articles" for ::1 at 2021-07-03 12:33:53 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 5107)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.2ms | Allocations: 6311)
+
+
+Started GET "/articles/4" for ::1 at 2021-07-03 12:34:05 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4112)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.3ms | Allocations: 6061)
+
+
+Started GET "/articles/4/edit" for ::1 at 2021-07-03 12:34:08 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5754)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.2ms | Allocations: 6883)
+
+
+Started GET "/articles/5" for ::1 at 2021-07-03 12:34:10 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4692)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 5692)
+
+
+Started GET "/articles/5/edit" for ::1 at 2021-07-03 12:34:12 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 742)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 5391)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.2ms | Allocations: 6390)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:35:19 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5094)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.2ms | Allocations: 6293)
+
+
+Started GET "/articles/new" for ::1 at 2021-07-03 12:35:24 +0530
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2040)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2823)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3382)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles"}, missing required keys: [:id]):
+    28: 
+    29: <% end %>
+    30: 
+    31: <%= link_to "Back to articles listing", article_path %>
+  
+app/views/articles/new.html.erb:31
+Started GET "/articles/new" for ::1 at 2021-07-03 12:35:48 +0530
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2038)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2122)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3304)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles"}, missing required keys: [:id]):
+    28: 
+    29: <% end %>
+    30: 
+    31: # <%= link_to "Back to articles listing", article_path %>
+  
+app/views/articles/new.html.erb:31
+Started GET "/articles" for ::1 at 2021-07-03 12:35:51 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5094)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.2ms | Allocations: 5674)
+
+
+Started GET "/articles/new" for ::1 at 2021-07-03 12:35:52 +0530
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1713)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1797)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2226)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles"}, missing required keys: [:id]):
+    28: 
+    29: <% end %>
+    30: 
+    31: # <%= link_to "Back to articles listing", article_path %>
+  
+app/views/articles/new.html.erb:31
+Started GET "/articles/new" for ::1 at 2021-07-03 12:35:59 +0530
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1029)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 5064)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 6272)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:36:04 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4846)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 5427)
+
+
+Started GET "/articles/new" for ::1 at 2021-07-03 12:36:06 +0530
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5370)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 5829)
+
+
+Started GET "/articles/new" for ::1 at 2021-07-03 12:36:34 +0530
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5106)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 6314)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:36:36 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 5708)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms | Allocations: 6291)
+
+
+Started GET "/articles/new" for ::1 at 2021-07-03 12:36:38 +0530
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 5382)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 5841)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:36:39 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 5476)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.2ms | Allocations: 5930)
+
+
+Started GET "/articles/new" for ::1 at 2021-07-03 12:36:48 +0530
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4619)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 5077)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:36:49 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 5479)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 5933)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:05 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 5094)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 6293)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:06 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4619)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 5071)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:06 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 7758)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.8ms | Allocations: 8208)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:06 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4613)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 5064)
+
+
+Started GET "/articles/4" for ::1 at 2021-07-03 12:37:06 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 223)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4910)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 6039)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:07 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 5480)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 5935)
+
+
+Started GET "/articles/4/edit" for ::1 at 2021-07-03 12:37:09 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 5746)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.1ms | Allocations: 6874)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:10 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 833)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 5476)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.1ms | Allocations: 5931)
+
+
+Started GET "/articles/4/edit" for ::1 at 2021-07-03 12:37:11 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 760)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4658)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 5661)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:12 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 5470)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.2ms | Allocations: 5924)
+
+
+Started GET "/articles/4" for ::1 at 2021-07-03 12:37:14 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 4715)
+Completed 200 OK in 24ms (Views: 19.4ms | ActiveRecord: 0.3ms | Allocations: 5714)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:15 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1514)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 5477)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.4ms | Allocations: 5931)
+
+
+Started GET "/articles/4/edit" for ::1 at 2021-07-03 12:37:23 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 760)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5294)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 6296)
+
+
+Started GET "/articles/4/edit" for ::1 at 2021-07-03 12:37:43 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5134)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 6883)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:44 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1761)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 5731)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.2ms | Allocations: 6316)
+
+
+Started GET "/articles/5" for ::1 at 2021-07-03 12:37:45 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 859)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4870)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.1ms | Allocations: 6001)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:37:47 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 849)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 4737)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.3ms | Allocations: 5199)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:39:14 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 5095)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 6299)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:39:14 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4619)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 5070)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:39:14 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 851)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5030)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms | Allocations: 5480)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:39:15 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4612)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 5062)
+
+
+Started GET "/articles/4/edit" for ::1 at 2021-07-03 12:39:15 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 5752)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.2ms | Allocations: 6880)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:39:17 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 848)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 4723)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 5185)
+
+
+Started GET "/articles/4" for ::1 at 2021-07-03 12:39:18 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 258)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4903)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.1ms | Allocations: 6031)
+
+
+Started GET "/articles/4/edit" for ::1 at 2021-07-03 12:39:19 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:12:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5403)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.2ms | Allocations: 6403)
+
+
+Started GET "/articles" for ::1 at 2021-07-03 12:39:21 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:13
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5481)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 5936)
+
+
+Started GET "/articles/4" for ::1 at 2021-07-03 12:39:22 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:39:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 93)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 3969)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 0.1ms | Allocations: 4991)
+
+
