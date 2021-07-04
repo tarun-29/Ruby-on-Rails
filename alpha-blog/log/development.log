@@ -9795,3 +9795,581 @@ Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 1.1ms | Allocations: 122
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-07-04 14:44:44 +0530
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 253)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 5242)
+Completed 200 OK in 22ms (Views: 20.9ms | Allocations: 6222)
+
+
+Started GET "/users/3/edit" for ::1 at 2021-07-04 14:46:01 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.1ms | Allocations: 301)
+  Rendered layouts/_messages.html.erb (Duration: 1.2ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 1.2ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 6234)
+Completed 200 OK in 40ms (Views: 27.5ms | ActiveRecord: 0.4ms | Allocations: 13426)
+
+
+Started GET "/users/3/edit" for ::1 at 2021-07-04 14:47:29 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.4ms | Allocations: 242)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1709)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.6ms | Allocations: 291)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 7844)
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 0.2ms | Allocations: 9589)
+
+
+Started GET "/users/3/edit" for ::1 at 2021-07-04 14:49:12 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1038)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6024)
+Completed 200 OK in 24ms (Views: 13.0ms | ActiveRecord: 0.8ms | Allocations: 13061)
+
+
+Started PATCH "/users/3" for ::1 at 2021-07-04 14:49:34 +0530
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tarun98", "email"=>"tarun99@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update Your Account", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1181)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/users_controller.rb:22:in `update'
+Started PATCH "/users/3" for ::1 at 2021-07-04 14:50:06 +0530
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tarun98", "email"=>"tarun99@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update Your Account", "id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "tarun98"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "tarun99@example.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "tarun98"], ["updated_at", "2021-07-04 09:20:06.884067"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 28ms (ActiveRecord: 5.0ms | Allocations: 11376)
+
+
+Started GET "/articles/3" for ::1 at 2021-07-04 14:50:06 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `set_article'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.8ms | Allocations: 4505)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=3):
+  
+app/controllers/articles_controller.rb:45:in `set_article'
+Started GET "/articles/3" for ::1 at 2021-07-04 14:50:07 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `set_article'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1149)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=3):
+  
+app/controllers/articles_controller.rb:45:in `set_article'
+Started GET "/users/3/edit" for ::1 at 2021-07-04 14:50:41 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1034)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 6073)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.1ms | Allocations: 7225)
+
+
+Started PATCH "/users/3" for ::1 at 2021-07-04 14:50:43 +0530
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tarun98", "email"=>"tarun99@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update Your Account", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "tarun98"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "tarun99@example.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 20ms (ActiveRecord: 1.2ms | Allocations: 4403)
+
+
+Started GET "/articles/3" for ::1 at 2021-07-04 14:50:43 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `set_article'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1150)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=3):
+  
+app/controllers/articles_controller.rb:45:in `set_article'
+Started GET "/users/3/edit" for ::1 at 2021-07-04 14:51:25 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1038)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 6039)
+Completed 200 OK in 30ms (Views: 15.6ms | ActiveRecord: 1.1ms | Allocations: 13085)
+
+
+Started PATCH "/users/3" for ::1 at 2021-07-04 14:51:29 +0530
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tarun97", "email"=>"tarun99@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update Your Account", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "tarun97"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "tarun99@example.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "tarun97"], ["updated_at", "2021-07-04 09:21:29.848197"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 22ms (ActiveRecord: 2.8ms | Allocations: 5399)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 14:51:29 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5511)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 10456)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.6ms | Allocations: 12252)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/signup" for ::1 at 2021-07-04 14:53:04 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1104)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1189)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2373)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1 align="center">Signup for Alpha Blog</h1>
+
+<%= render 'form %>'
+
+):
+1:    <h1 align="center">Signup for Alpha Blog</h1>
+2:    
+3:    <%= render 'form %>'
+  
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/signup" for ::1 at 2021-07-04 14:56:15 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1104)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1189)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2373)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1 align="center">Sign Up for Alpha Blog</h1>
+
+<%= render 'form %>'
+
+):
+1:    <h1 align="center">Sign Up for Alpha Blog</h1>
+2:    
+3:    <%= render 'form %>'
+  
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/new.html.erb:3: syntax error, unexpected $undefined, expecting ')'
+app/views/users/new.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/signup" for ::1 at 2021-07-04 16:32:47 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 7.2ms | Allocations: 1462)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1804)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 1889)
+Completed 500 Internal Server Error in 31ms (Allocations: 3073)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<%= render 'shared/errors', obj: @user %>
+
+<div>
+  <div class='col-xs-12'>
+    <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :username %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :username, class: "form-control", placeholder: "Enter Username", autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :email %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.email_field :email, class: "form-control", placeholder: "Enter Email" %>
+        </div>
+      </div>  
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :password %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.password_field :password, class: "form-control", placeholder: "Enter Password" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit(@user.new_record ? "Sign Up" : "Update Account"), class: 'btn btn-primary btn-lg' %>
+        </div>
+      </div>
+    <% end %>
+    <div class="col-xs-4 col-xs-offset-4">
+      [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+    </div>
+  </div>
+</div>
+):
+1:    
+2:    <%= render 'shared/errors', obj: @user %>
+3:    
+4:    <div>
+5:      <div class='col-xs-12'>
+6:        <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+7:          <div class="form-group">
+8:            <div class="control-label col-sm-2">
+9:              <%= f.label :username %>
+10:            </div>
+11:            <div class="col-sm-8">
+12:              <%= f.text_field :username, class: "form-control", placeholder: "Enter Username", autofocus: true %>
+13:            </div>
+14:          </div>
+15:          <div class="form-group">
+16:            <div class="control-label col-sm-2">
+17:              <%= f.label :email %>
+18:            </div>
+19:            <div class="col-sm-8">
+20:              <%= f.email_field :email, class: "form-control", placeholder: "Enter Email" %>
+21:            </div>
+22:          </div>  
+23:          <div class="form-group">
+24:            <div class="control-label col-sm-2">
+25:              <%= f.label :password %>
+26:            </div>
+27:            <div class="col-sm-8">
+28:              <%= f.password_field :password, class: "form-control", placeholder: "Enter Password" %>
+29:            </div>
+30:          </div>
+31:          <div class="form-group">
+32:            <div class="col-sm-offset-2 col-sm-10">
+33:              <%= f.submit(@user.new_record ? "Sign Up" : "Update Account"), class: 'btn btn-primary btn-lg' %>
+34:            </div>
+35:          </div>
+36:        <% end %>
+37:        <div class="col-xs-4 col-xs-offset-4">
+38:          [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+39:        </div>
+40:      </div>
+41:    </div>
+  
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:33: syntax error, unexpected ',', expecting ')'
+app/views/users/new.html.erb:3
+Started GET "/signup" for ::1 at 2021-07-04 16:34:07 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.1ms | Allocations: 242)
+  Rendered users/_form.html.erb (Duration: 6.6ms | Allocations: 1628)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1966)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.7ms | Allocations: 291)
+  Rendered layouts/_messages.html.erb (Duration: 1.4ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 8109)
+Completed 200 OK in 37ms (Views: 34.9ms | Allocations: 9318)
+
+
+Started GET "/signup" for ::1 at 2021-07-04 16:34:24 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.1ms | Allocations: 242)
+  Rendered users/_form.html.erb (Duration: 4.8ms | Allocations: 1616)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 291)
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 8088)
+Completed 200 OK in 30ms (Views: 28.4ms | Allocations: 9292)
+
+
+Started POST "/users" for ::1 at 2021-07-04 16:34:43 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 4.0ms | Allocations: 2464)
+  Rendered users/_form.html.erb (Duration: 11.7ms | Allocations: 6505)
+  Rendered users/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 6610)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 11554)
+Completed 200 OK in 49ms (Views: 28.7ms | ActiveRecord: 1.4ms | Allocations: 16433)
+
+
+Started POST "/users" for ::1 at 2021-07-04 16:35:02 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tk1999", "email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "tk1999"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 3.3ms | Allocations: 1360)
+  Rendered users/_form.html.erb (Duration: 7.9ms | Allocations: 4129)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 106)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 9174)
+Completed 200 OK in 31ms (Views: 18.7ms | ActiveRecord: 0.8ms | Allocations: 13405)
+
+
+Started POST "/users" for ::1 at 2021-07-04 16:35:08 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tk1999", "email"=>"tk@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "tk1999"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "tk@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.7ms | Allocations: 483)
+  Rendered users/_form.html.erb (Duration: 3.5ms | Allocations: 2009)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2114)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 106)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 7055)
+Completed 200 OK in 30ms (Views: 18.3ms | ActiveRecord: 0.7ms | Allocations: 11236)
+
+
+Started POST "/users" for ::1 at 2021-07-04 16:35:13 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tk1999", "email"=>"tk@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "tk1999"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "tk@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "tk1999"], ["email", "tk@example.com"], ["created_at", "2021-07-04 11:05:14.200073"], ["updated_at", "2021-07-04 11:05:14.200073"], ["password_digest", "$2a$12$wNf0j9baKT3v2Qt.J./LQulOoulPPQC3IXk8dXfFMDuyMiGyGXaK."]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 281ms (ActiveRecord: 3.1ms | Allocations: 4455)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 16:35:14 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 6492)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.2ms | Allocations: 7492)
+
+
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/5/edit" for ::1 at 2021-07-04 16:35:35 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_form.html.erb (Duration: 2.7ms | Allocations: 984)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 6206)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.3ms | Allocations: 7350)
+
+
+Started PATCH "/users/5" for ::1 at 2021-07-04 16:35:40 +0530
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tk199", "email"=>"tk@example.com", "password"=>"[FILTERED]"}, "commit"=>"Update account", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "tk199"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "tk@example.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "tk199"], ["updated_at", "2021-07-04 11:05:40.128596"], ["id", 5]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 21ms (ActiveRecord: 2.3ms | Allocations: 5157)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 16:35:40 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 6211)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 1.3ms | Allocations: 6677)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
