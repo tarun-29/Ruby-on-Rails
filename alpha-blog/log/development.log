@@ -10373,3 +10373,516 @@ Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 1.3ms | Allocations: 667
 
 
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/3" for ::1 at 2021-07-04 16:46:28 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:31:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3387)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3471)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms | Allocations: 10640)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x007fa3b9d7d098>
+Did you mean?  @user):
+    1: <h1 align="center">Welcome to <%= user.username %>'s page</h1>
+    2: 
+    3: <div>
+    4:   <div class="col-md-4 col-md-offset-4 center">
+  
+app/views/users/show.html.erb:1
+Started GET "/users/3" for ::1 at 2021-07-04 16:46:51 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 3218)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3302)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms | Allocations: 5025)
+
+
+  
+ActionView::Template::Error (undefined method `gravitar_for' for #<ActionView::Base:0x007fa3b99c1918>
+Did you mean?  gravatar_for):
+    2: 
+    3: <div>
+    4:   <div class="col-md-4 col-md-offset-4 center">
+    5:     <%= gravitar_for @user %>
+    6:   </div>
+    7: </div>
+    8: 
+  
+app/views/users/show.html.erb:5
+Started GET "/users/3" for ::1 at 2021-07-04 16:47:04 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 217)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.3ms | Allocations: 303)
+  Rendered layouts/_messages.html.erb (Duration: 1.4ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 1.3ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 6369)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.2ms | Allocations: 8118)
+
+
+Started GET "/users/3" for ::1 at 2021-07-04 16:50:47 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 211)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.2ms | Allocations: 301)
+  Rendered layouts/_messages.html.erb (Duration: 1.7ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 6357)
+Completed 200 OK in 44ms (Views: 36.5ms | ActiveRecord: 0.3ms | Allocations: 8102)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 16:50:49 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5145)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 6938)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 16:50:57 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1678)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1762)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2942)
+
+
+  
+ActionView::Template::Error (Missing partial articles/_article, application/_article with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/tarunkantiwal/Desktop/RailsCode/alpha-blog/app/views"
+  * "/Users/tarunkantiwal/.rvm/gems/ruby-2.5.1@railcourse/gems/actiontext-6.1.4/app/views"
+  * "/Users/tarunkantiwal/.rvm/gems/ruby-2.5.1@railcourse/gems/actionmailbox-6.1.4/app/views"
+):
+    1: <h1 align="center">Listing all articles</h1>
+    2: 
+    3: 
+    4: <%= render "article" %>
+  
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:51:13 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:2
+  Rendered articles/_article.html.erb (Duration: 11.0ms | Allocations: 5253)
+  Rendered articles/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 5585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.4ms | Allocations: 291)
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 11631)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.3ms | Allocations: 12842)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 16:52:10 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 1.5ms | Allocations: 1390)
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1726)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1811)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2996)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<% @obj.each do |article=| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well well-lg">
+        <div class="article-title">
+          <%= link_to article.title, article_path(article) %>
+        </div>
+        <div class="article-body">
+          <%= truncate(article.description, length: 100) %>
+          <div class="article-meta-details">
+            <small>Created by: <%= article.user.username if article.user %>,
+            <%= time_ago_in_words(article.created_at) %> ago,
+              last_updated: <%= time_ago_in_words(article.updated_at) %> ago
+            </small>
+          </div>
+        </div>
+        <div class="article-actions">
+          <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
+          <%= link_to "Delete this article", article_path(article), method: :delete, 
+                                        data: { confirm: "Are you sure you want to delete the article?"}, 
+                                        class: "btn btn-xs btn-danger" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+):
+1:    
+2:    <% @obj.each do |article=| %>
+3:      <div class="row">
+4:        <div class="col-xs-8 col-xs-offset-2">
+5:          <div class="well well-lg">
+6:            <div class="article-title">
+7:              <%= link_to article.title, article_path(article) %>
+8:            </div>
+9:            <div class="article-body">
+10:              <%= truncate(article.description, length: 100) %>
+11:              <div class="article-meta-details">
+12:                <small>Created by: <%= article.user.username if article.user %>,
+13:                <%= time_ago_in_words(article.created_at) %> ago,
+14:                  last_updated: <%= time_ago_in_words(article.updated_at) %> ago
+15:                </small>
+16:              </div>
+17:            </div>
+18:            <div class="article-actions">
+19:              <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
+20:              <%= link_to "Delete this article", article_path(article), method: :delete, 
+21:                                            data: { confirm: "Are you sure you want to delete the article?"}, 
+22:                                            class: "btn btn-xs btn-danger" %>
+23:            </div>
+24:          </div>
+25:        </div>
+26:      </div>
+27:    <% end %>
+  
+app/views/articles/_article.html.erb:2: syntax error, unexpected '|'
+app/views/articles/_article.html.erb:29: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/articles/_article.html.erb:2: syntax error, unexpected '|'
+app/views/articles/_article.html.erb:29: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/articles/_article.html.erb:2: syntax error, unexpected '|'
+app/views/articles/_article.html.erb:29: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/articles/_article.html.erb:2: syntax error, unexpected '|'
+app/views/articles/_article.html.erb:29: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/articles/_article.html.erb:2: syntax error, unexpected '|'
+app/views/articles/_article.html.erb:29: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/articles/_article.html.erb:2: syntax error, unexpected '|'
+app/views/articles/_article.html.erb:29: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:52:19 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 2.2ms | Allocations: 1687)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2023)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2107)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3291)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: <% @obj.each do |article| %>
+    3:   <div class="row">
+    4:     <div class="col-xs-8 col-xs-offset-2">
+    5:       <div class="well well-lg">
+  
+app/views/articles/_article.html.erb:2
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:52:34 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 3.6ms | Allocations: 1688)
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2027)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2111)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3295)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: <% @obj.each do |article| %>
+    3:   <div class="row">
+    4:     <div class="col-xs-8 col-xs-offset-2">
+    5:       <div class="well well-lg">
+  
+app/views/articles/_article.html.erb:2
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:53:49 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 2.6ms | Allocations: 1688)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2024)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2108)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3292)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: <% @obj.each do |article| %>
+    3:   <div class="row">
+    4:     <div class="col-xs-8 col-xs-offset-2">
+    5:       <div class="well well-lg">
+  
+app/views/articles/_article.html.erb:2
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:54:32 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 2.7ms | Allocations: 1681)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2017)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2101)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3285)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <% @obj.each do |article| %>
+    2:   <div class="row">
+    3:     <div class="col-xs-8 col-xs-offset-2">
+    4:       <div class="well well-lg">
+  
+app/views/articles/_article.html.erb:1
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:54:40 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 2.0ms | Allocations: 1683)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2019)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2103)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3287)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <%= @obj.each do |article| %>
+    2:   <div class="row">
+    3:     <div class="col-xs-8 col-xs-offset-2">
+    4:       <div class="well well-lg">
+  
+app/views/articles/_article.html.erb:1
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:55:02 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 10.3ms | Allocations: 3868)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4204)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4288)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms | Allocations: 5472)
+
+
+  
+ActionView::Template::Error (undefined method `categories' for #<Article:0x00007fa3b9a40880>):
+    13:                     last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
+    14:           </div>
+    15:         </div>
+    16:         <% if article.categories.any? %>
+    17:           <p>Categories: <%= render article.categories %></p>
+    18:         <% end %>
+    19:         <% if logged_in? && (current_user == article.user || current_user.admin?) %>
+  
+app/views/articles/_article.html.erb:16
+app/views/articles/_article.html.erb:1
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:55:25 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 15.6ms | Allocations: 3440)
+  Rendered articles/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 3549)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3633)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 4064)
+
+
+  
+ActionView::Template::Error (undefined method `categories' for #<Article:0x00007fa3b5507c78>):
+    13:                     last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
+    14:           </div>
+    15:         </div>
+    16:         <% if article.categories.any? %>
+    17:           <p>Categories: <%= render article.categories %></p>
+    18:         <% end %>
+    19:         <% if logged_in? && (current_user == article.user || current_user.admin?) %>
+  
+app/views/articles/_article.html.erb:16
+app/views/articles/_article.html.erb:1
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:55:30 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 2.8ms | Allocations: 1682)
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2018)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2102)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3286)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <%= @obj.each do |article| %>
+    2:   <div class="row">
+    3:     <div class="col-xs-8 col-xs-offset-2">
+    4:       <div class="well well-lg">
+  
+app/views/articles/_article.html.erb:1
+app/views/articles/index.html.erb:4
+Started GET "/articles" for ::1 at 2021-07-04 16:55:42 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 4.3ms | Allocations: 1459)
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.3ms | Allocations: 291)
+  Rendered layouts/_messages.html.erb (Duration: 1.0ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 7935)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.1ms | Allocations: 9146)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 16:55:49 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 3.6ms | Allocations: 1460)
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1792)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 291)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 7928)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.1ms | Allocations: 9133)
+
+
+Started GET "/users/3" for ::1 at 2021-07-04 16:55:58 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 7.0ms | Allocations: 1860)
+  Rendered users/show.html.erb within layouts/application (Duration: 27.6ms | Allocations: 9013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 13956)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 0.4ms | Allocations: 15488)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 16:56:58 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 6.0ms | Allocations: 1217)
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 109)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 7223)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms | Allocations: 7685)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Update (0.8ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ?, "user_id" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2021-07-04 11:27:55.938847"], ["user_id", 5], ["id", 4]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ?, "user_id" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2021-07-04 11:28:18.746533"], ["user_id", 5], ["id", 5]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/3" for ::1 at 2021-07-04 16:58:27 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 2.7ms | Allocations: 816)
+  Rendered users/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 981)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 115)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 6009)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms | Allocations: 7006)
+
+
+Started GET "/users/3" for ::1 at 2021-07-04 16:58:28 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 1.8ms | Allocations: 817)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 982)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 6010)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 7006)
+
+
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/5" for ::1 at 2021-07-04 16:58:43 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 3.4ms | Allocations: 1312)
+  Rendered users/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1477)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 6497)
+Completed 200 OK in 31ms (Views: 23.4ms | ActiveRecord: 0.4ms | Allocations: 7494)
+
+
