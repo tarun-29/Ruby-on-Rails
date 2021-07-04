@@ -11479,3 +11479,117 @@ Did you mean?  root_path
   
 app/views/layouts/_navigation.html.erb:27
 app/views/layouts/application.html.erb:14
+Started GET "/login" for ::1 at 2021-07-04 20:11:25 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 10.9ms | Allocations: 3303)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 8388)
+Completed 500 Internal Server Error in 32ms (Allocations: 8800)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<ActionView::Base:0x007fa3bd187668>
+Did you mean?  root_path
+               about_path):
+    24:         </div>
+    25:       </li>
+    26:       <li class="nav-item" id="#li-padding">
+    27:         <%= link_to "Log out", logout_path , method: :delete%>
+    28:       </li>
+    29:     </ul>
+    30:     <form class="form-inline my-2 my-lg-0">
+  
+app/views/layouts/_navigation.html.erb:27
+app/views/layouts/application.html.erb:14
+Started GET "/login" for ::1 at 2021-07-04 20:12:53 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 430)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 13.0ms | Allocations: 3306)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 8359)
+Completed 500 Internal Server Error in 32ms (Allocations: 8924)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<ActionView::Base:0x007fa3bd0c79a8>
+Did you mean?  root_path
+               about_path):
+    24:         </div>
+    25:       </li>
+    26:       <li class="nav-item" id="#li-padding">
+    27:         <%= link_to "Log out", logout_path , method: :delete%>
+    28:       </li>
+    29:     </ul>
+    30:     <form class="form-inline my-2 my-lg-0">
+  
+app/views/layouts/_navigation.html.erb:27
+app/views/layouts/application.html.erb:14
+Started GET "/login" for ::1 at 2021-07-04 20:17:54 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 430)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 136)
+  Rendered layouts/_messages.html.erb (Duration: 1.3ms | Allocations: 235)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 6002)
+Completed 200 OK in 25ms (Views: 24.1ms | Allocations: 6594)
+
+
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/login" for ::1 at 2021-07-04 20:30:35 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"tk@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tk@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 250ms (ActiveRecord: 0.8ms | Allocations: 10514)
+
+
+Started GET "/users/5" for ::1 at 2021-07-04 20:30:35 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (Duration: 16.7ms | Allocations: 5452)
+  Rendered users/show.html.erb within layouts/application (Duration: 22.5ms | Allocations: 7207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 135)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 12178)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.4ms | Allocations: 13838)
+
+
+Started DELETE "/logout" for ::1 at 2021-07-04 20:30:41 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 321)
+
+
+Started GET "/" for ::1 at 2021-07-04 20:30:41 +0530
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 135)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 68)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 5269)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 6253)
+
+
