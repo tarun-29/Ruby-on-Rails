@@ -9448,3 +9448,350 @@ Migrating to AddUserIdToArticles (20210704075604)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2021-07-04 13:57:03 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 678)
+
+
+  
+SyntaxError (/Users/tarunkantiwal/Desktop/RailsCode/alpha-blog/app/models/article.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+... validates :user_id, presence :true
+...                              ^):
+  
+app/models/article.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/models/article.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/models/article.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/articles_controller.rb:5:in `index'
+Started GET "/articles" for ::1 at 2021-07-04 13:58:06 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 10839)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 10923)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.6ms | Allocations: 13691)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+     9:         </div>
+    10:         <div class="article-body">
+    11:           <%= truncate(article.description, length: 100) %>
+    12:           <small>Created by: <%= article.user.username %>,
+    13:            <%= time_ago_in_words(article.created_at) %> ago,
+    14:             last_updated: <%= time_ago_in_words(article.updated_at) %> ago
+    15:           </small>
+  
+app/views/articles/index.html.erb:12
+app/views/articles/index.html.erb:3
+Started GET "/articles" for ::1 at 2021-07-04 13:58:28 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1469)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.1ms | Allocations: 293)
+  Rendered layouts/_messages.html.erb (Duration: 1.1ms | Allocations: 234)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 7740)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.4ms | Allocations: 8961)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 14:01:56 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.4ms | Allocations: 292)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 141.6ms | Allocations: 30467)
+Completed 200 OK in 146ms (Views: 144.2ms | ActiveRecord: 0.1ms | Allocations: 31677)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 14:09:31 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 184.1ms | Allocations: 28858)
+Completed 200 OK in 191ms (Views: 187.0ms | ActiveRecord: 1.3ms | Allocations: 29315)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToUsers (20210704084517)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210704084517"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for ::1 at 2021-07-04 14:18:45 +0530
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 11117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.2ms | Allocations: 305)
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 242)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 283.8ms | Allocations: 35400)
+Completed 200 OK in 307ms (Views: 288.4ms | ActiveRecord: 0.9ms | Allocations: 41336)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 14:27:40 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 7390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.2ms | Allocations: 293)
+  Rendered layouts/_messages.html.erb (Duration: 1.0ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 1.2ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 13437)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.4ms | Allocations: 15446)
+
+
+Started GET "/signup" for ::1 at 2021-07-04 14:27:46 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.6ms | Allocations: 250)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 4080)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4165)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.9ms | Allocations: 8778)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x007fa3b5b60d40>):
+    2: 
+    3: <div>
+    4:   <div class='col-xs-12'>
+    5:     <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+    6:       <div class="form-group">
+    7:         <div class="control-label col-sm-2">
+    8:           <%= f.label :username %>
+  
+app/views/users/new.html.erb:5
+Started GET "/signup" for ::1 at 2021-07-04 14:29:11 +0530
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered users/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2455)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 7562)
+Completed 200 OK in 38ms (Views: 27.8ms | ActiveRecord: 0.7ms | Allocations: 14197)
+
+
+Started GET "/signup" for ::1 at 2021-07-04 14:29:54 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.0ms | Allocations: 242)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1747)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 291)
+  Rendered layouts/_messages.html.erb (Duration: 1.7ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 1.7ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 7885)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 9095)
+
+
+Started GET "/signup" for ::1 at 2021-07-04 14:31:00 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.9ms | Allocations: 242)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.1ms | Allocations: 291)
+  Rendered layouts/_messages.html.erb (Duration: 1.3ms | Allocations: 230)
+  Rendered layouts/_footer.html.erb (Duration: 1.5ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 7752)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 8967)
+
+
+Started GET "/signup" for ::1 at 2021-07-04 14:35:15 +0530
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1009)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 5996)
+Completed 200 OK in 28ms (Views: 19.6ms | ActiveRecord: 0.2ms | Allocations: 11908)
+
+
+Started POST "/users" for ::1 at 2021-07-04 14:35:41 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tarun29", "email"=>"tarun@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "tarun29"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "tarun@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "tarun29"], ["email", "tarun@example.com"], ["created_at", "2021-07-04 09:05:41.575158"], ["updated_at", "2021-07-04 09:05:41.575158"], ["password_digest", "$2a$12$eAJolRUNAXORar3aPvvlTutjhS2.k57e.eqKMHDk0Q1VN0lvpsQM."]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 1.8ms | Allocations: 7828)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x007fa3b6679f38>
+Did you mean?  @user):
+  
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/users" for ::1 at 2021-07-04 14:37:06 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tarun29", "email"=>"tarun@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "tarun29"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "tarun@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.4ms | Allocations: 1062)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layouts/_messages.html.erb (Duration: 0.8ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 8173)
+Completed 200 OK in 264ms (Views: 24.7ms | ActiveRecord: 1.2ms | Allocations: 18523)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users" for ::1 at 2021-07-04 14:37:32 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tarun99", "email"=>"tarun99@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "tarun99"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "tarun99@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "tarun99"], ["email", "tarun99@example.com"], ["created_at", "2021-07-04 09:07:32.869908"], ["updated_at", "2021-07-04 09:07:32.869908"], ["password_digest", "$2a$12$sRhVT5MRnEtVpB70Hoj6/uMhLa2keb6bPpzgtFJNH2vFxUV1rMueW"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 3.4ms | Allocations: 4874)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"articles"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:10:in `create'
+Started POST "/users" for ::1 at 2021-07-04 14:37:41 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tarun99", "email"=>"tarun99@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "tarun99"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "tarun99@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.5ms | Allocations: 974)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 8084)
+Completed 200 OK in 276ms (Views: 23.4ms | ActiveRecord: 2.3ms | Allocations: 22624)
+
+
+Started POST "/users" for ::1 at 2021-07-04 14:37:49 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"tarun999", "email"=>"tarun999@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "tarun999"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "tarun999@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["username", "tarun999"], ["email", "tarun999@example.com"], ["created_at", "2021-07-04 09:07:49.873652"], ["updated_at", "2021-07-04 09:07:49.873652"], ["password_digest", "$2a$12$oeM9OBkkCgmp8aYMHxrdE.Sssrb5vSLW.P2tMyfLPCcH9cN5Txl8e"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 236ms (ActiveRecord: 3.1ms | Allocations: 4496)
+
+
+Started GET "/articles" for ::1 at 2021-07-04 14:37:49 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 5544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 10489)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 1.1ms | Allocations: 12291)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
