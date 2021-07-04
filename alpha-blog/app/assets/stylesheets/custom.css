@@ -1,5 +1,5 @@
 .navbar {
-  background-color: black !important;
+  background-color: pink !important;
 }
 
 #logo {
@@ -53,6 +53,11 @@
   font-size: 1.5em;
 }
 
+.article-meta-details{
+  border-top: 1px solid #eaeaea;
+  margin-top: 15px;
+}
+
 .article-body {
   border-top: 1px solid #eaeaea;
   padding-top: 15px;
@@ -91,5 +96,7 @@ footer ul li {
 .nav-link{
   padding: 0rem 1rem;
 }
+
+
 
 /* @import 'bootstrap/dist/css/bootstrap'; */
